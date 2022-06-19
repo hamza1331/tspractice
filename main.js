@@ -1,6 +1,8 @@
+"use strict";
 // function log (message){
 //     console.log(message)
 // }
+exports.__esModule = true;
 // let messageD = 'Hello word'
 // log(messageD)
 //Types
@@ -45,17 +47,69 @@
 //INTERFACE DOES NOT CONTAIN DEFINITION OR LOGIC OF FUNCTION WHICH IS WHY WE CAN NOT GROUP
 //SIMILAR functions and properties into one block. Therefore, we need to use classes and implement
 //concept of cohesion or grouping elements which are highly related into one block.
-var Point = /** @class */ (function () {
-    function Point() {
-    }
-    Point.prototype.draw = function () {
-        console.log('X: ' + this.x + ', Y: ' + this.y);
-    };
-    Point.prototype.calculateDistance = function (another) {
-    };
-    return Point;
-}());
-var point = new Point();
-point.x = 1;
-point.y = 3;
+// class Point {
+//     x:number;
+//     y:number;
+//     draw(){
+//         console.log('X: '+this.x + ', Y: '+this.y)
+//     }
+//     calculateDistance(another:Point){
+//     }
+// } 
+// let point = new Point()
+// point.x = 1;
+// point.y = 3
+// point.draw()
+//Constructor
+// class Point {
+//     x:number;
+//     y:number;
+//     constructor(x:number,y:number){
+//         this.x=x
+//         this.y=y
+//     }
+//     draw(){
+//         console.log('X: '+this.x + ', Y: '+this.y)
+//     }
+//     calculateDistance(another:Point){
+//     }
+// } 
+// let point = new Point(5,6)
+// point.draw()
+//Access modifiers in constructor to avoid reduntant code
+// class Point {
+//     constructor(private x:number,private y:number){
+//     }
+//     draw(){
+//         console.log('X: '+this.x + ', Y: '+this.y)
+//     }
+// } 
+// let point = new Point(5,6)
+// point.draw()
+//GEt and set values
+// class Point {
+//     constructor(private x:number,private y:number){
+//     }
+//     draw(){
+//         console.log('X: '+this.x + ', Y: '+this.y)
+//     }
+//     get X(){
+//         return this.X
+//     }
+//     set X(value){
+//         if(value<0){
+//             console.log('Vlaue can not be less than 0')
+//         }
+//         else{
+//             this.X = value
+//         }
+//     }
+// } 
+// let point = new Point(5,6)
+// point.X = 7
+// point.draw()
+//Modules
+var point_1 = require("./point");
+var point = new point_1.Point(5, 6);
+point.x = 7;
 point.draw();

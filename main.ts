@@ -152,5 +152,5 @@
 import {Point} from './point'
 
 let point = new Point(5,6)
-point.X = 7
+point.x = 7
 point.draw()

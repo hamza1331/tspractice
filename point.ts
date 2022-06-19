@@ -1,19 +1,19 @@
 export class Point {
-    constructor(private x:number,private y:number){
+    constructor(private _x:number,private _y:number){
 
     }
     draw(){
-        console.log('X: '+this.x + ', Y: '+this.y)
+        console.log('X: '+this._x + ', Y: '+this._y)
     }
-    get X(){
-        return this.X
+    get x(){
+        return this._x
     }
-    set X(value){
+    set x(value){
         if(value<0){
             console.log('Vlaue can not be less than 0')
         }
         else{
-            this.X = value
+            this._x = value
         }
     }
 } 
